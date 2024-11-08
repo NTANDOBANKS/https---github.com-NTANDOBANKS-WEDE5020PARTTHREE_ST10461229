@@ -3,35 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Enhanced SEO Meta Tags -->
     <meta
       name="description"
-      content="CHOSA (Children of South Africa) - Providing compassionate care and opportunities for underprivileged children in South Africa."
+      content="CHOSA (Children of South Africa) - Providing compassionate care and opportunities for underprivileged children in South Africa through education, healthcare, and community support."
     />
     <meta
       name="keywords"
-      content="CHOSA, Children of South Africa, NGO, child support, South Africa, education, community support"
+      content="CHOSA, Children of South Africa, NGO, child support, South Africa, education, community support, child welfare, donations, volunteer"
     />
     <meta name="author" content="CHOSA" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="CHOSA - Empowering Children in South Africa"
+    />
+    <meta
+      property="og:description"
+      content="Supporting underprivileged children in South Africa through education and community development."
+    />
+    <meta property="og:image" content="images/ChosoLogo.png" />
+    <meta property="og:url" content="https://www.chosa.org" />
 
     <title>CHOSA - Empowering Children in South Africa</title>
 
-    <!-- External CSS & Font -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <!-- External CSS & Fonts -->
     <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Font Awesome for icons -->
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
+
   <body>
     <!-- Header -->
     <header>
@@ -45,7 +58,7 @@
 
         <nav id="main-nav" aria-label="Main navigation">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="contact-us.html">Contact Us</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="news.html">News</a></li>
@@ -55,9 +68,15 @@
       </div>
     </header>
 
+    <!-- Logo Section -->
+    <section class="logo-section">
+      <img src="images/Chos" alt="CHOSA Logo 1" class="sub-logo" />
+      <img src="images/ChosoLogo2.png" alt="CHOSA Logo 2" class="sub-logo" />
+      <img src="images/ChosoLogo3.png" alt="CHOSA Logo 3" class="sub-logo" />
+    </section>
+
     <!-- Main Content -->
     <main id="main-content">
-      <!-- Intro Section with Image -->
       <section id="intro">
         <h2>Our Mission</h2>
         <p>
@@ -74,25 +93,46 @@
           communities.
         </p>
 
-        <h3>Our Contact</h3>
-        <address>
-          123 Main Street<br />
-          City, Country<br />
-          Phone: <a href="tel:+271234567890">+27 123 456 7890</a><br />
-          Email: <a href="mailto:info@chosa.org">info@chosa.org</a><br />
-          Website:
-          <a href="https://www.chosa.org" target="_blank">www.chosa.org</a
-          ><br />
-          Fax: +27 123 456 7891<br />
-          <strong>Hours:</strong> Mon-Fri: 9:00 AM - 5:00 PM
-        </address>
+        <!-- Google Form Integration -->
+        <section id="contact-form">
+          <h3>Contact Form</h3>
+          <iframe
+            src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+            width="100%"
+            height="800"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >
+            Loading...
+          </iframe>
+        </section>
+
+        <section id="contact-info">
+          <h3>Our Contact</h3>
+          <address>
+            123 Main Street<br />
+            City, Country<br />
+            Phone: <a href="tel:+271234567890">+27 123 456 7890</a><br />
+            Email: <a href="mailto:info@chosa.org">info@chosa.org</a><br />
+            Website:
+            <a
+              href="https://www.chosa.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              >www.chosa.org</a
+            ><br />
+            Fax: +27 123 456 7891<br />
+            <strong>Hours:</strong> Mon-Fri: 9:00 AM - 5:00 PM
+          </address>
+        </section>
       </article>
     </main>
 
-    <!-- Footer with Attribution -->
+    <!-- Footer -->
     <footer>
       <h2>CHOSA</h2>
-      <nav>
+      <nav aria-label="Footer navigation">
         <ul>
           <li><a href="about.html">About Us</a></li>
           <li><a href="careers.html">Careers</a></li>
@@ -103,8 +143,35 @@
       </nav>
       <p>
         &copy; 2023 CHOSA. All Rights Reserved. Logo by
-        <a href="https://example.com">Artist Name</a>.
+        <a href="https://example.com" rel="noopener noreferrer">Artist Name</a>.
+      </p>
+      <p class="timestamp">
+        Last Updated: <time datetime="2023-11-14">November 14, 2023</time>
       </p>
     </footer>
+
+    <!-- Schema.org markup for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NGO",
+        "name": "CHOSA",
+        "alternateName": "Children of South Africa",
+        "url": "https://www.chosa.org",
+        "logo": "images/ChosoLogo.png",
+        "description": "CHOSA is a South African NGO providing assistance to less fortunate children and communities.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Main Street",
+          "addressLocality": "City",
+          "addressCountry": "South Africa"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+27-123-456-7890",
+          "contactType": "customer service"
+        }
+      }
+    </script>
   </body>
 </html>
