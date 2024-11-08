@@ -8,7 +8,11 @@
   --text-primary: #ffffff;
   --text-secondary: #d4d4d4;
   --gradient-gold: linear-gradient(45deg, var(--gold-primary), var(--bronze));
-  --gradient-dark: linear-gradient(135deg, var(--primary-black), var(--secondary-black));
+  --gradient-dark: linear-gradient(
+    135deg,
+    var(--primary-black),
+    var(--secondary-black)
+  );
 }
 
 * {
@@ -27,8 +31,16 @@ body {
   color: var(--text-primary);
   display: flex;
   flex-direction: column;
-  background-image: radial-gradient(circle at top right, rgba(255, 215, 0, 0.1) 0%, transparent 60%),
-    radial-gradient(circle at bottom left, rgba(205, 127, 50, 0.1) 0%, transparent 60%);
+  background-image: radial-gradient(
+      circle at top right,
+      rgba(255, 215, 0, 0.1) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(205, 127, 50, 0.1) 0%,
+      transparent 60%
+    );
 }
 
 /* Header Styles */
@@ -128,7 +140,8 @@ section:hover {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
-h2, h3 {
+h2,
+h3 {
   font-family: "Cinzel", serif;
   color: var(--gold-primary);
 }
@@ -189,10 +202,12 @@ footer a:hover {
 /* Animations */
 @keyframes goldGlow {
   from {
-    text-shadow: 0 0 5px var(--gold-primary), 0 0 10px var(--gold-primary), 0 0 15px var(--gold-accent);
+    text-shadow: 0 0 5px var(--gold-primary), 0 0 10px var(--gold-primary),
+      0 0 15px var(--gold-accent);
   }
   to {
-    text-shadow: 0 0 10px var(--gold-primary), 0 0 20px var(--gold-primary), 0 0 30px var(--gold-accent);
+    text-shadow: 0 0 10px var(--gold-primary), 0 0 20px var(--gold-primary),
+      0 0 30px var(--gold-accent);
   }
 }
 
@@ -226,4 +241,3 @@ footer a:hover {
     padding: 0.8rem 1.8rem;
   }
 }
-
